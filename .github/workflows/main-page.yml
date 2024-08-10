@@ -42,6 +42,6 @@ jobs:
         with:
           path: "./website" # ./website is the path where the website contents are so we upload this folder.
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy Website
         id: deployment
         uses: actions/deploy-pages@v4.0.5
