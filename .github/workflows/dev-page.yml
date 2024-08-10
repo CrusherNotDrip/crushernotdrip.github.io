@@ -26,11 +26,13 @@ jobs:
     deploy:
         environment:
             name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }} /dev
+            url: ${{ steps.deployment.outputs.page_url }}/dev
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
               uses: actions/checkout@v4
+              with:
+                path: ${{ github.workspace }}/dev
             - name: Setup Pages
               uses: actions/configure-pages@v5
             - name: Upload artifact
