@@ -1,7 +1,7 @@
 body {
     background-color: black;
     color: white;
-    text-align: center;
+    font-family: Oxanium;
 }
 
 .title {
@@ -11,9 +11,19 @@ body {
     border-image-repeat: stretch;
     border-image-slice: 4;
     color: aqua;
+    text-align: center;
+    font-family: Tiny5;
+}
+
+.topnav {
+    font-family: Tiny5;
 }
 
 a {
     text-decoration: none;
-    color: blue;
+    color: #0094FF;
+}
+
+.blue {
+    color: #0094FF;
 }
