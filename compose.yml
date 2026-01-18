@@ -1,0 +1,15 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: crusher-website
+    restart: unless-stopped
+    volumes:
+      - ./website:/usr/share/nginx/html:ro
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: crusher-tunnel
+    restart: unless-stopped
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}
+    command: tunnel run
